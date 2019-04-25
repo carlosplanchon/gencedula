@@ -8,7 +8,7 @@ readme = Path("README.md").read_text()
 setup(
     name="gencedula",
     packages=["gencedula"],
-    version="0.2",
+    version="0.3",
     license="GPL3",
     description="Python3 module to generate random "
             "and verify uruguay identification document.",
@@ -18,7 +18,7 @@ setup(
     author_email="bubbledoloresuruguay2@gmail.com",
     url="https://github.com/carlosplanchon/gencedula",
     download_url="https://github.com/carlosplanchon/"
-        "gencedula/archive/v0.2.tar.gz",
+        "gencedula/archive/v0.3.tar.gz",
     keywords=[
         "generate",
         "uruguay",
