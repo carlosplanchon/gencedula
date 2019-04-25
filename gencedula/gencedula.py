@@ -43,5 +43,8 @@ def generate_cedula(
     :param step: int: Step. (Default value = 0)
 
     """
+    if start < 0 or stop > 10_000_000:
+        raise ValueError("Start have to be between 0 and 10 000 000.")
+
     cedula = randrange(start=start, stop=stop, step=step)
     return int(f"{cedula}{get_verifier_digit(cedula)}")
