@@ -34,7 +34,7 @@ def get_verifier_digit(cedula: int) -> int:
 def generate_cedula(
     start: int = 0,
     stop: int = 10_000_000,
-    step: int = 0
+    step: int = 1
         ) -> int:
     """
     Get a random uruguayan identity document.
