@@ -44,7 +44,7 @@ def generate_cedula(
 
     """
     if start < 0 or stop > 10_000_000:
-        raise ValueError("Start have to be between 0 and 10 000 000.")
+        raise ValueError("Cedula values have to be between 0 and 10 000 000.")
 
     cedula = randrange(start=start, stop=stop, step=step)
     return int(f"{cedula}{get_verifier_digit(cedula)}")
