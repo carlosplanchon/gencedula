@@ -20,11 +20,12 @@ setup(
     download_url="https://github.com/carlosplanchon/"
         "gencedula/archive/v0.2.tar.gz",
     keywords=[
-        "verify",
         "generate",
         "uruguay",
         "identification",
         "document",
+        "verify",
+        "number",
         "cedula"
         ],
     install_requires=[
