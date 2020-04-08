@@ -1,11 +1,11 @@
-# generatecedula
+# gencedula
 *Python3 module to generate random and verify
 uruguay identification document.*
 
 ## Installation
 ### Install with pip
 ```
-pip3 install -U generatecedula
+pip3 install -U gencedula
 ```
 
 ## Usage
