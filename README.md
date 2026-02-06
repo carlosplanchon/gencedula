@@ -1,5 +1,5 @@
 # gencedula
-*Python3 module to generate random and verify
+*Python module to generate random and verify
 uruguay identification document.*
 
 ## Installation
