@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gencedula"
+version = "0.4"
+description = "Python module to generate random and verify uruguay identification document."
+readme = "README.md"
+
+license = "MIT"
+license-files = ["LICENSE"]
+
+authors = [
+    {name = "Carlos A. Planchón", email = "bubbledoloresuruguay2@gmail.com"}
+]
+keywords = [
+    "generate",
+    "uruguay",
+    "identification",
+    "document",
+    "verify",
+    "number",
+    "cedula"
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14"
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/carlosplanchon/gencedula"
+Download = "https://github.com/carlosplanchon/gencedula/archive/v0.4.tar.gz"
+
+[tool.setuptools]
+packages = ["gencedula"]
