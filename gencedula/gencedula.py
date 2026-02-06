@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from secretsrandrange import randrange
+from random import randrange
 
 
 def get_verifier_digit(cedula: int) -> int:
