@@ -3,9 +3,9 @@
 uruguay identification document.*
 
 ## Installation
-### Install with pip
+### Install with uv
 ```
-pip3 install -U gencedula
+uv add gencedula
 ```
 
 ## Usage
