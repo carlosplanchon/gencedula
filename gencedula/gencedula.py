@@ -3,7 +3,7 @@
 from random import randrange
 
 
-def get_verifier_digit(cedula: int) -> int:
+def calculate_digito_verificador(cedula: int) -> int:
     """
     Get verifier digit of uruguayan identification document.
     https://es.wikipedia.org/wiki/C%C3%A9dula_de_Identidad_de_Uruguay
@@ -47,4 +47,4 @@ def generate_cedula(
         raise ValueError("Cedula values have to be between 0 and 10 000 000.")
 
     cedula = randrange(start=start, stop=stop, step=step)
-    return int(f"{cedula}{get_verifier_digit(cedula)}")
+    return int(f"{cedula}{calculate_digito_verificador(cedula)}")
