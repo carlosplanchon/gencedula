@@ -1,0 +1,35 @@
+name: Release
+
+# Publish to PyPI when a version tag is pushed:
+#   git tag v0.9 && git push origin v0.9
+# Requires a PyPI trusted publisher configured for this repo and workflow.
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # PyPI trusted publishing (OIDC); no stored tokens
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      # Fail fast if the tag was pushed without committing the version bump.
+      - name: Check tag matches pyproject.toml version
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          pkg=$(grep -m1 '^version' pyproject.toml | cut -d'"' -f2)
+          if [ "$tag" != "$pkg" ]; then
+            echo "::error::Tag v$tag does not match pyproject.toml version $pkg."
+            exit 1
+          fi
+      - uses: astral-sh/setup-uv@v7
+      - name: Build sdist and wheel
+        run: uv build
+      - name: Publish to PyPI
+        run: uv publish --trusted-publishing always
