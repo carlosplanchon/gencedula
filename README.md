@@ -2,6 +2,11 @@
 *Python module to generate random and verify
 uruguay identification document.*
 
+Zero runtime dependencies. Handy for generating valid test data:
+the uruguayan *cédula de identidad* is not covered by
+[python-stdnum](https://arthurdejong.org/python-stdnum/) (which only
+ships the uruguayan RUT), and validators don't generate numbers anyway.
+
 ## Installation
 ### Install with uv
 ```
@@ -30,4 +35,21 @@ In [2]: for x in range(10):
 44844000
 41564007
 49684003
+
+In [3]: gencedula.verify_cedula(46308006)
+Out[3]: True
+
+In [4]: gencedula.verify_cedula(46308007)
+Out[4]: False
+
+In [5]: gencedula.calculate_digito_verificador(4630800)
+Out[5]: 6
+
+In [6]: gencedula.format_cedula(46308006)
+Out[6]: '4.630.800-6'
+```
+
+## Tests
+```
+python -m unittest discover tests
 ```
