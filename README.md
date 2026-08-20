@@ -1,6 +1,5 @@
 # gencedula
-*Python module to generate random and verify
-uruguay identification document.*
+*Generate and verify Uruguayan identity document numbers.*
 
 Zero runtime dependencies. Handy for generating valid test data:
 the uruguayan *cédula de identidad* is not covered by
