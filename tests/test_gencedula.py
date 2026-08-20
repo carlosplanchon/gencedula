@@ -61,6 +61,13 @@ class TestFormatCedula(unittest.TestCase):
             self.assertRegex(format_cedula(generate_cedula()), pattern)
 
 
+class TestMetadata(unittest.TestCase):
+    def test_version_attribute(self):
+        import gencedula
+        self.assertIsInstance(gencedula.__version__, str)
+        self.assertTrue(gencedula.__version__)
+
+
 class TestGenerateCedula(unittest.TestCase):
     def test_generated_cedulas_are_valid(self):
         for _ in range(1000):
