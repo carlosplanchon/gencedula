@@ -1,6 +1,6 @@
 # gencedula
 
-![gencedula — check digit utilities for Uruguayan cédulas in Python](https://raw.githubusercontent.com/carlosplanchon/gencedula/master/assets/gencedula_banner.jpg)
+![gencedula — check digit utilities for Uruguayan cédulas in Python](https://raw.githubusercontent.com/carlosplanchon/gencedula/master/assets/banner-v2.jpg)
 
 *Generate and verify Uruguayan identity document numbers.*
 
