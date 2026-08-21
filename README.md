@@ -1,10 +1,19 @@
 # gencedula
+
+![gencedula — check digit utilities for Uruguayan cédulas in Python](https://raw.githubusercontent.com/carlosplanchon/gencedula/master/assets/gencedula_banner.jpg)
+
 *Generate and verify Uruguayan identity document numbers.*
 
 Zero runtime dependencies. Handy for generating valid test data:
 the uruguayan *cédula de identidad* is not covered by
 [python-stdnum](https://arthurdejong.org/python-stdnum/) (which only
 ships the uruguayan RUT), and validators don't generate numbers anyway.
+
+A generated number is only *checksum-valid*: it passes the
+verifier-digit algorithm, but that does not mean it was ever issued,
+and it may coincide with a real person's number. `verify_cedula`
+likewise checks the verifier digit only, not whether the document
+exists.
 
 ## Installation
 ### Install with uv

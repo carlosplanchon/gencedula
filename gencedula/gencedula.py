@@ -69,6 +69,8 @@ def generate_cedula(
         ) -> int:
     """
     Get a random uruguayan identity document.
+    The result is checksum-valid but not necessarily an issued
+    document.
     :param start: int: Start number. (Default value = 0)
     :param stop: int: Stop number, exclusive. (Default value = 10_000_000)
     :param step: int: Step. (Default value = 1)
