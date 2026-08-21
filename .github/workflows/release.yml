@@ -14,6 +14,8 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    # Must match the "Environment name" of the PyPI trusted publisher.
+    environment: pypi
     permissions:
       id-token: write   # PyPI trusted publishing (OIDC); no stored tokens
       contents: read
