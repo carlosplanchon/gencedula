@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gencedula"
-version = "0.9"
+version = "1.0.0"
 description = "Generate and verify Uruguayan identity document numbers."
 readme = "README.md"
 
@@ -24,6 +24,7 @@ keywords = [
     "cedula"
 ]
 classifiers = [
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "Topic :: Utilities",
     "Programming Language :: Python :: 3",
